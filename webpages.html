@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjivani University | A Modern College Website</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Tailwind's gray-50 */
+        }
+        /* Hide all sections by default */
+        main section {
+            display: none;
+        }
+        /* Show the active section */
+        main section.active {
+            display: block;
+        }
+        /* Style for active nav link */
+        nav a.active {
+            color: #4f46e5; /* Tailwind's indigo-600 */
+            font-weight: 600;
+            border-bottom: 2px solid #4f46e5;
+        }
+        /* Smooth transition for section visibility */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        main section.active {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header and Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="nav-link text-2xl font-bold text-indigo-600">
+                <i class="fas fa-graduation-cap mr-2"></i>Sanjivani University
+            </a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="nav-link text-gray-600 hover:text-indigo-600 transition duration-300 pb-1">Home</a>
+                <a href="#about" class="nav-link text-gray-600 hover:text-indigo-600 transition duration-300 pb-1">About</a>
+                <a href="#faculty" class="nav-link text-gray-600 hover:text-indigo-600 transition duration-300 pb-1">Faculty</a>
+                <a href="#students" class="nav-link text-gray-600 hover:text-indigo-600 transition duration-300 pb-1">Students</a>
+                <a href="#social" class="nav-link text-gray-600 hover:text-indigo-600 transition duration-300 pb-1">Social</a>
+                <a href="#contact" class="nav-link text-gray-600 hover:text-indigo-600 transition duration-300 pb-1">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-4">
+            <a href="#home" class="nav-link block py-2 text-gray-600 hover:text-indigo-600">Home</a>
+            <a href="#about" class="nav-link block py-2 text-gray-600 hover:text-indigo-600">About</a>
+            <a href="#faculty" class="nav-link block py-2 text-gray-600 hover:text-indigo-600">Faculty</a>
+            <a href="#students" class="nav-link block py-2 text-gray-600 hover:text-indigo-600">Students</a>
+            <a href="#social" class="nav-link block py-2 text-gray-600 hover:text-indigo-600">Social</a>
+            <a href="#contact" class="nav-link block py-2 text-gray-600 hover:text-indigo-600">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Home Section -->
+        <section id="home">
+            <div class="relative rounded-lg overflow-hidden h-[60vh] flex items-center justify-center text-white text-center bg-gray-800">
+                <img src="Sanjivani-College-of-Pharmaceutical-Education-and-Research.webp" 
+                     onerror="this.onerror=null;this.src='https://placehold.co/1200x600/334155/e2e8f0?text=Image+Not+Found';"
+                     alt="A modern university building" class="absolute inset-0 w-full h-full object-cover opacity-40">
+                <div class="relative z-10 p-8">
+                    <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Knowledge. Innovation. Social Impact.</h1>
+                    <br><br><br>
+                    <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Sanjivani's legacy is defined by excellence, innovation, and global cooperation. Prioritizing academic rigor and research, it fosters a culture of continuous learning.</p>
+                    <a href="#contact" class="nav-link bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg">Apply Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2 class="text-3xl font-bold text-center mb-8">About Sanjivani University</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://placehold.co/600x400/a5b4fc/1e293b?text=+Sanjivani+Vision+%26+Mission" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x400/a5b4fc/1e293b?text=Image';"
+                         alt="College History" class="rounded-lg shadow-lg">
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-semibold text-indigo-600">Our Mission & Vision</h3>
+                    <p class="text-gray-600 leading-relaxed">Providing state of the art infrastructure, industry centric curriculum and education focusing on ethics and critical thinking.Promoting an innovative and research oriented environment for fostering effective problem solving and entrepreneurial development.
+Collaborating with National and International Industries and Higher Education Institutions for academics and research</p>
+                    <p class="text-gray-600 leading-relaxed">To emerge as a globally recognised university for excellence in Education, Research, Innovation and Entrepreneurship in order to produce effective leaders for serving the society.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Faculty Section -->
+        <section id="faculty">
+            <h2 class="text-3xl font-bold text-center mb-8">Meet Our Faculty</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Faculty Member 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/200x200/c7d2fe/312e81?text=YM" 
+                         alt="Faculty Member Prof. Yogesh Modhe" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-indigo-200 object-cover">
+                    <h3 class="text-xl font-semibold">Prof. Yogesh Modhe</h3>
+                    <p class="text-indigo-500">Agile Methodology</p>
+                    <p class="text-gray-500 mt-2 text-sm">Head of MCA and BCA Department.</p>
+                </div>
+                <!-- Faculty Member 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/200x200/c7d2fe/312e81?text=SN" 
+                         alt="Faculty Member Prof. Shashank Nath" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-indigo-200 object-cover">
+                    <h3 class="text-xl font-semibold">Prof. Shashank Nath</h3>
+                    <p class="text-indigo-500">Web Technology</p>
+                    
+                </div>
+                <!-- Faculty Member 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/200x200/c7d2fe/312e81?text=VK" 
+                         alt="Faculty Member Dr. Vikas Kumar" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-indigo-200 object-cover">
+                    <h3 class="text-xl font-semibold">Dr. Vikas Kumar</h3>
+                    <p class="text-indigo-500">Machine learning</p>
+                    
+                </div>
+                <!-- Faculty Member 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/200x200/c7d2fe/312e81?text=K"
+                         alt="Faculty Member Prof. Kalyani" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-indigo-200 object-cover">
+                    <h3 class="text-xl font-semibold">Prof. Kalyani</h3>
+                    <p class="text-indigo-500">Japanease</p>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Students Section -->
+        <section id="students">
+            <h2 class="text-3xl font-bold text-center mb-8">Student Life & Resources</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <!-- Student Life -->
+                    <div class="space-y-3">
+                        <i class="fas fa-users text-4xl text-indigo-500"></i>
+                        <h3 class="text-xl font-semibold">Health Facilities</h3>
+                        <p class="text-gray-600">The university also has an on-campus clinic that operates at specified times to provide basic medical care.</p>
+                    </div>
+                    <!-- Resources -->
+                    <div class="space-y-3">
+                        <i class="fas fa-book-open-reader text-4xl text-indigo-500"></i>
+                        <h3 class="text-xl font-semibold">Academic Support</h3>
+                        <p class="text-gray-600">Access tutoring, writing centers, and career services to help you succeed.</p>
+                    </div>
+                    <!-- Campus -->
+                    <div class="space-y-3">
+                        <i class="fas fa-dumbbell text-4xl text-indigo-500"></i>
+                        <h3 class="text-xl font-semibold">Sport Facilities</h3>
+                        <p class="text-gray-600">Gymkhana and Sports Facilities at Sanjivani University</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section id="social">
+            <h2 class="text-3xl font-bold text-center mb-8">Connect With Us</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-8">Follow our journey, get the latest updates, and see what life at Sanjivani University is all about. Join our vibrant online community!</p>
+            <div class="flex justify-center space-x-6">
+                <a href="https://www.facebook.com/profile.php?id=61558570642598" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                    <i class="fab fa-facebook-f text-4xl"></i>
+                </a>
+                <a href="https://www.instagram.com/sanjivani.universityofficial?igsh=MXhuZmxtbXJtYTcxYw==" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-pink-600 transition-colors duration-300">
+                    <i class="fab fa-instagram text-4xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/sanjivani-university/posts/?feedView=all" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-700 transition-colors duration-300">
+                    <i class="fab fa-linkedin-in text-4xl"></i>
+                </a>
+                <a href="https://www.youtube.com/@SanjivaniUniversity" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-red-600 transition-colors duration-300">
+                    <i class="fab fa-youtube text-4xl"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2 class="text-3xl font-bold text-center mb-8">Get In Touch</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4">Send us a Message</h3>
+                    <form action="#" method="POST">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-700 transition duration-300">Submit</button>
+                    </form>
+                </div>
+                <!-- Contact Info -->
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold flex items-center"><i class="fas fa-map-marker-alt mr-3 text-indigo-500"></i>Address</h3>
+                        <p class="text-gray-600 mt-2">Sanjivani University, Kopargaon, Near Shirdi, Ahmednagar (Ahilyanagar), 423601.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold flex items-center"><i class="fas fa-phone mr-3 text-indigo-500"></i>Phone</h3>
+                        <p class="text-gray-600 mt-2">+91 9130191301</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold flex items-center"><i class="fas fa-envelope mr-3 text-indigo-500"></i>Email</h3>
+                        <p class="text-gray-600 mt-2">contact@sanjivani.edu.in</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2025 Sanjivani University.</p>
+            <p class="text-gray-400 text-sm mt-2"> All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('main section');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Function to show a section
+            function showSection(hash) {
+                // Default to #home if hash is empty or just #
+                const targetId = (hash && hash !== '#') ? hash.substring(1) : 'home';
+                const targetSection = document.getElementById(targetId);
+
+                // Hide all sections
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                });
+
+                // Show the target section
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                } else {
+                    // Fallback to home if target not found
+                    document.getElementById('home').classList.add('active');
+                }
+
+                // Update active link style
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${targetId}`) {
+                        link.classList.add('active');
+                    }
+                });
+                
+                // Close mobile menu after navigation
+                mobileMenu.classList.add('hidden');
+            }
+
+            // Handle navigation clicks
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const hash = this.getAttribute('href');
+                    // Update URL hash for bookmarking/history
+                    if(history.pushState) {
+                        history.pushState(null, null, hash);
+                    } else {
+                        location.hash = hash;
+                    }
+                    showSection(hash);
+                });
+            });
+
+            // Handle browser back/forward buttons
+            window.addEventListener('popstate', function() {
+                showSection(window.location.hash);
+            });
+
+            // Toggle mobile menu
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Show initial section based on URL hash or default to home
+            showSection(window.location.hash || '#home');
+        });
+    </script>
+
+</body>
+</html>
